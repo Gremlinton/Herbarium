@@ -21,6 +21,17 @@ main{
     justify-content:space-between;
     border-bottom:4px solid #659645;
 }
+
+.logo{
+    height: 52px;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+.logo p{
+    padding-top: 12px;
+    padding-left: 3px;
+}
+
 nav{
     display:contents;
     align-items:center;
