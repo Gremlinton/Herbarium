@@ -32,86 +32,385 @@
 		<script src="modal.js"></script>
 	</header>
 	<main>
-		<div class="content-wrapper">
-			<div class="content">
-				<h1>The Collections at our Museum</h1>
-				<div class="maincol">
-					<div class="maincol-row">
-						<img src="img/carcollection.png" alt="belobog museum">
-						<article class="welcome-articles">
-							<h2>An Extensive Collection of Cars Manufactured in Belobog</h2>
-							<p>Thanks to a very wealthy donor, we are able to permanently display almost all car models that have ever been manufactured in Belobog!
-							</p>
-							<br/>
-							<p>Welcome to "Driven by Innovation," an exceptional collection that
-								showcases the rich heritage of automobile manufacturing in our vibrant city.
-								Step into a world where craftsmanship, engineering excellence,
-								and automotive innovation have been the driving force behind our community's growth and prosperity.
-							</p>
-							<br/>
-							<p>Within this captivating collection, we proudly present an impressive array of cars,
-								each bearing the mark of our city's ingenuity and dedication to progress.
-								From classic vintage models to sleek and modern designs,
-								every vehicle on display tells a story of our city's automotive legacy.
-							</p>
-							<br/>
-							<p>Discover the early pioneers that revolutionized the industry,
-								as you marvel at vintage automobiles with their elegant curves and meticulously crafted details.
-								Transport yourself to an era where chrome grilles and whitewall tires epitomized luxury and style.
-								Witness the evolution of automotive design and engineering,
-								from streamlined mid-century models to the bold and powerful machines of today.
-							</p>
-						</article>
-					</div>
-					<div class="maincol-row">
-						<img src="img/paintingcollection.png" alt="belobog museum">
-						<article class="welcome-articles">
-							<h2>A Large Collection of Paintings by a Famous Artist from Belobog</h2>
-							<p>We are thrilled to unveil a truly extraordinary addition to The Belobog History & Culture Museum's esteemed art collection. 
-								We have been blessed with the generous donation of a captivating series of paintings by a famous artist. 
-								This remarkable collection showcases the artistic brilliance and creative vision of a true master.
-							</p>
-							<br/>
-							<p> Step into the vibrant world of urban life with "Urban Tapestry,"
-								an extraordinarypainting collection by the renowned artist, Rebini.
-								Known for his exceptional ability to capture the diverse and captivating aspects of our cityscape,
-								Rebini presents a visual symphony that celebrates the essence and allure of our bustling city.
-							</p>
-							<br/>
-							<p>Each brushstroke in this awe-inspiring collection unveils a unique perspective on the urban environment,
-								inviting viewers to explore the captivating tapestry of a city through the eyes of a masterful artist.
-								With impeccable attention to detail and a keen sense of atmosphere,Rebini beautifully encapsulates the energy,
-								rhythm, and distinct character of different regions of Belobog.
-							</p>
-						</article>
-					</div>
-					<div class="maincol-row">
-						<img src="img/techcollection.png" alt="belobog museum">
-						<article class="welcome-articles">
-							<h2>A collection of old technology, to look back and see the progress we have made</h2>
-							<p>tep back in time and witness the remarkable progress of our city through the captivating collection,
-								"From Antiquity to Progress: The Evolution of Technology."
-								Delve into the rich history of our city's technological advancements,
-								showcasing a diverse array of vintage machines, inventions,
-								and relics that have played a pivotal role in shaping our community.
-							</p>
-							<br/>
-							<p>Within this extraordinary collection, we present a treasure trove of old technology
-								that stands as a testament to the city's remarkable advancements.
-								From the earliest inventions to the marvels of engineering that paved the way for modernization,
-								each artifact tells a story of innovation, perseverance, and the collective spirit of our city's residents.
-							</p>
-							<br/>
-							<p>Together, let us honor the legacy of our city's technological pioneers
-								and pay homage to the advancements that have shaped our lives.
-								"Legacy Unveiled" is a reminder that progress is a continuous journey,
-								and we stand on the shoulders of those who came before us.
-							</p>
-						</article>
-					</div>
+		<div class="main-wrapper">
+            <div class="main-wrapper">
+
+        <div class="container-fluid my-4">
+            <div class="page-title-holder" id="headingOne">
+                <h1 class="page-title">მონაცემების ფილტრი</h1>
+                <button class="btn btn-outline-primary btn-sm" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" title="Show/hide filters">
+                    <i class="bi bi-funnel"></i>
+                </button>
+            </div>
+            <div class="accordion mb-3" id="accordionFilter">
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionFilter">
+                    <div class="card">
+                        <div class="card-body">
+							<div class="data-search-accordion">
+                                <form action="https://tbi.iliauni.edu.ge/ka/record" method="GET">
+                                    <input type="hidden" name="sort_by" value="created_at">
+                                    <input type="hidden" name="sort_dir" value="desc">
+                                    <input id="perPage" type="hidden" name="per_page" value="15">
+                                    <input id="withImages" type="hidden" name="with_images" value="">
+                                    <input id="withGeolocation" type="hidden" name="with_geolocation" value="">
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-2">
+                                            <label for="family">ოჯახი</label>
+                                            <input type="text" class="form-control" name="family" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="genus">გვარი</label>
+                                            <input type="text" class="form-control" name="genus" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="specificEpithet">სახეობის ეპითეტი</label>
+                                            <input type="text" class="form-control" name="specific_epithet" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="infraspecificEpithet">შიგასახეობრივი ეპითეტი</label>
+                                            <input type="text" class="form-control" name="infra_specific_epithet" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="author">ავტორი</label>
+                                            <input type="text" class="form-control" name="author" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="pan">პირვ. საკოლექციო ნომერი</label>
+                                            <input type="text" class="form-control" name="name" value="">
+                                        </div>
+                                        <div class="form-group col-lg-1">
+                                            <label for="istype">სტატუსი</label>
+                                            <select class="form-control" name="is_type" id="isType" onchange="validateStatus()">
+                                                <option value="no"  selected >არა</option>
+                                                <option value="yes" >კი</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-lg-1">
+                                            <label for="type">ტიპი</label>
+                                            <select class="form-control" name="type" id="typeStatus" disabled>
+                                                <option selected disabled value="">არჩევა</option>
+												<option value="2" >ტიპი</option>
+												<option value="3" >სინტიპი</option>
+												<option value="4" >იზოტიპი</option>
+											</select>
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="collectors">შემგროვებელი</label>
+                                            <input type="text" class="form-control" name="collectors" value="">
+                                        </div>
+                                        <div class="form-group col-lg-3">
+                                            <label>შეგროვების თარიღი</label>
+                                            <div class="filter-date">
+                                                <input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="collection_date_day" value="">
+                                                <select class="form-control" name="collection_date_month">
+                                                    <option selected disabled value="">შეგროვების თვე</option>
+													<option value="1" >იანვარი</option>
+													<option value="2" >თებერვალი</option>
+													<option value="3" >მარტი</option>
+													<option value="4" >აპრილი</option>
+													<option value="5" >მაისი</option>
+													<option value="6" >ივნისი</option>
+													<option value="7" >ივლისი</option>
+													<option value="8" >აგვისტო</option>
+													<option value="9" >სექტემბერი</option>
+													<option value="10" >ოქტომბერი</option>
+													<option value="11" >ნოემბერი</option>
+													<option value="12" >დეკემბერი</option>
+												</select>
+                                                <input type="number" min="0" class="form-control" placeholder="შეგროვების წელი" name="collection_date_year" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="identifier">გამრკვევი</label>
+                                            <input type="text" class="form-control" name="identifier" value="">
+                                        </div>
+                                        <div class="form-group col-lg-3">
+                                            <label>გარკვევის თარიღი</label>
+                                            <div class="filter-date">
+                                                <input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="identification_date_day" value="">
+                                                <select class="form-control" name="identification_date_month">
+                                                    <option selected disabled value="">გარკვევის თვე</option>
+													<option value="1" >იანვარი</option>
+													<option value="2" >თებერვალი</option>
+													<option value="3" >მარტი</option>
+													<option value="4" >აპრილი</option>
+													<option value="5" >მაისი</option>
+													<option value="6" >ივნისი</option>
+													<option value="7" >ივლისი</option>
+													<option value="8" >აგვისტო</option>
+													<option value="9" >სექტემბერი</option>
+													<option value="10" >ოქტომბერი</option>
+													<option value="11" >ნოემბერი</option>
+													<option value="12" >დეკემბერი</option>
+												</select>
+                                                <input type="number" min="0" class="form-control" placeholder="გარკვევის წელი" name="identification_date_year" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="country">ქვეყანა</label>
+                                            <select class="form-control" name="country">
+                                                <option selected disabled value="">ქვეყანა</option>
+												<option value="1" >საქართველო</option>
+												<option value="3" >სომხეთი</option>
+												<option value="4" >თურქეთი</option>
+												<option value="5" >აზერბაიჯანი</option>
+												<option value="6" >რუსეთი</option>
+											</select>
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="region">რეგიონი</label>
+                                            <input type="text" class="form-control" name="region" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="municipality">მუნიციპალიტეტი</label>
+                                            <input type="text" class="form-control" name="municipality" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="locality">ლოკაცია</label>
+                                            <input type="text" class="form-control" name="place" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="habitat">ჰაბიტატი</label>
+                                            <div class="habitat">
+                                                <input type="text" class="form-control" name="habitat" value="">
+                                                <input type="text" class="form-control" name="code" placeholder="კოდი" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="altitude">სიმაღლე</label>
+                                            <div class="altitude">
+                                                <input type="number" min="0" class="form-control" name="altitude" value="">
+                                                <select class="form-control" name="altitude_value">
+                                                    <option selected disabled value="">საზ. ერთ.</option>
+													<option value="meter" >მეტრი</option>
+													<option value="feet" >ფუტი</option>
+												</select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-3">
+                                            <label for="altitudeRange">სიმაღლის დიაპაზონი</label>
+                                            <div class="altitude range">
+                                                <input type="number" min="0" class="form-control" placeholder="დან" name="altitude_range_from" value="">
+                                                <input type="number" min="0" class="form-control" placeholder="მდე" name="altitude_range_to" value="">
+                                                <select class="form-control" name="altitude_range_value">
+                                                    <option selected disabled value="">საზ. ერთ.</option>
+													<option value="meter" >მეტრი</option>
+													<option value="feet" >ფუტი</option>
+												</select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-1">
+                                            <label for="inclination">დახრ. კუთხე</label>
+                                            <input type="text" class="form-control" name="inclination" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="exposure">ექსპოზიცია</label>
+                                            <input type="text" class="form-control" name="exposure" value="">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <div class="buttons">
+                                                <a href="http://127.0.0.1:5501/herbarium.html" class="btn btn-danger">გაუქმება</a>
+                                                <button type="submit" class="btn btn-primary">ძებნა</button>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-filter">
+                <div class="results-per-page">
+                    ნაჩვენებია                    
+					<select id="changePerPage" class="custom-select custom-select-md">
+                        <option value="15"  selected >15</option>
+                        <option value="30" >30</option>
+                        <option value="60" >60</option>
+                    </select>
+                    ჩანაწერი                
 				</div>
-			</div>
-		</div>
+                <div class="top-filter-controll">
+                    <span class="d-block mr-2">ჩანაწერები</span>
+                    <div class="custom-control custom-switch switchers">
+                        <input type="checkbox" class="custom-control-input" id="changeWithImages" >
+                        <label class="custom-control-label" for="changeWithImages">სურათით</label>
+                    </div>
+                    <div class="custom-control custom-switch switchers">
+                        <input type="checkbox" class="custom-control-input" id="changeWithGeolocation" >
+                        <label class="custom-control-label" for="changeWithGeolocation">გეოლოკაციით</label>
+                    </div>
+                    <div class="btn-group dropleft">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            სორტირება                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item  active "
+                               href="http://tbi.iliauni.edu.ge/ka/record?sort_by=created_at&amp;sort_dir=desc&amp;per_page=15&amp;is_type=no">
+                                ბოლოს დამატებული                            </a>
+                            <a class="dropdown-item "
+                               href="http://tbi.iliauni.edu.ge/ka/record?sort_by=name&amp;sort_dir=asc&amp;per_page=15&amp;is_type=no">
+                                ა-ჰ                            </a>
+                            <a class="dropdown-item "
+                               href="http://tbi.iliauni.edu.ge/ka/record?sort_by=name&amp;sort_dir=desc&amp;per_page=15&amp;is_type=no">
+                                ჰ-ა                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-m">
+                <div class="col-lg-12">
+                    <div class="dp-grid">
+                        <div class="btn-holder">
+                            <div class="btn-sticky-wrap">
+                                <div class="controll-buttons">
+									<a class="btn btn-primary btn-sm" href="https://tbi.iliauni.edu.ge/ka/map?sort_by=created_at&amp;sort_dir=desc&amp;per_page=15&amp;is_type=no" title="Map view">
+                                        <i class="bi bi-globe"></i>
+									</a>
+									<button class="btn btn-primary btn-sm btn-disabled bookmarkSelectedNeedAuth" id="bookmarkSelected" title="Bookmark Selected">
+                                            <i class="bi bi-bookmark"></i>
+										</button>
+										<form action="https://tbi.iliauni.edu.ge/ka/record-mailto" method="GET">
+											<button class="btn btn-primary btn-sm btn-disabled" id="emailSelected" title="Email Selected">
+                                            <i class="bi bi-envelope"></i>
+										</button>
+										<input type="hidden" class="selected-items" value="" name="selected_items">
+									</form>
+                                    <form action="https://tbi.iliauni.edu.ge/ka/record-export" method="GET">
+										<input type="hidden" class="selected-items" value="" name="selected_items">
+										<button class="btn btn-primary btn-sm btn-disabled" id="exportSelected" title="Export Selected">
+                                            <i class="bi bi-filetype-xls"></i>
+										</button>
+                                    </form>
+									<div class="check-count" id="checkcount">0</div>
+									<button class="btn btn-danger btn-sm btn-disabled" id="trash" onclick="uncheckElements()" title="Clear Selection">
+                                        <i class="bi bi-x-lg"></i>
+									</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive limited-height">
+                            <table class="table table-striped dp-table">
+                                <thead>
+									<tr>
+										<th></th>
+										<th>პირველადი საკოლექციო ნომერი</th>
+										<th>შემგროვებელი</th>
+										<th>შეგროვების თარიღი</th>
+										<th>ქვეყანა</th>
+										<th>ლოკაცია</th>
+										<th>ტიპი</th>
+										<th>საიდენტიფიკაციო ნომერი</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="preflight">
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" id="customCheck11" onchange="checkboxes(11)">
+													<label class="custom-control-label" for="customCheck11"></label>
+												</div>
+												<button data-id="11" data-slug="11-asyneuma-campanuloides" class="btn btn-link text-darker u-none show-info-modal">
+													<i class="bi bi-info-circle-fill"></i>
+												</button>
+											</div>
+                                    	</td>
+										<th><a href="https://tbi.iliauni.edu.ge/ka/record/11-asyneuma-campanuloides">Asyneuma campanuloides</a></th>
+										<td>Ida Mandenova,შ. ქუთათელაძე</td>
+										<td>21 აგვისტო 1952</td>
+										<td>საქართველო</td>
+										<td>ჯვარი</td>
+										<td></td>
+										<td>TBI1033695</td>
+									</tr>
+									<tr>
+										<td>
+                                        	<div class="preflight">
+                                        	    <div class="custom-control custom-checkbox">
+                                        	        <input type="checkbox" class="custom-control-input" id="customCheck10" onchange="checkboxes(10)">
+                                        	        <label class="custom-control-label" for="customCheck10"></label>
+                                        	    </div>
+                                        	    <button data-id="10" data-slug="10-campanula-collina" class="btn btn-link text-darker u-none show-info-modal">
+													<i class="bi bi-info-circle-fill"></i>
+                                        	    </button>
+                                        	</div>
+                                 	   </td>
+	                                    <th><a href="https://tbi.iliauni.edu.ge/ka/record/10-campanula-collina">Campanula collina</a></th>
+										<td>G. Woronow</td>
+										<td>13 აგვისტო 1901</td>
+										<td>საქართველო</td>
+										<td>ad pedem montis Adange</td>
+										<td></td>
+										<td>TBI1037062</td>
+									</tr>
+									<tr>
+	                                    <td>
+    	                                    <div class="preflight">
+        	                                    <div class="custom-control custom-checkbox">
+            	                                    <input type="checkbox" class="custom-control-input" id="customCheck9" onchange="checkboxes(9)">
+                	                                <label class="custom-control-label" for="customCheck9"></label>
+                    	                        </div>
+                        	                    <button data-id="9" data-slug="9-campanula-alliariaefolia" class="btn btn-link text-darker u-none show-info-modal">
+                                                	<i class="bi bi-info-circle-fill"></i>
+                	                            </button>
+                	                        </div>
+                	                    </td>
+                	                    <th><a href="https://tbi.iliauni.edu.ge/ka/record/9-campanula-alliariaefolia">Campanula alliariaefolia</a></th>
+										<td>N. Popov</td>
+										<td>14 აგვისტო 1910</td>
+										<td>საქართველო</td>
+										<td>Между сс. Шуахеви и Тбети</td>
+										<td></td>
+										<td>TBI1037139</td>
+									</tr>
+									<tr>
+	                                    <td>
+    	                                    <div class="preflight">
+        	                                    <div class="custom-control custom-checkbox">
+            	                                    <input type="checkbox" class="custom-control-input" id="customCheck8" onchange="checkboxes(8)">
+                	                                <label class="custom-control-label" for="customCheck8"></label>
+                    	                        </div>
+                        	                    <button data-id="8" data-slug="8-podanthum-campanuloides" class="btn btn-link text-darker u-none show-info-modal">
+                                                	<i class="bi bi-info-circle-fill"></i>
+	                                            </button>
+    	                                    </div>
+        	                            </td>
+            	                        <th><a href="https://tbi.iliauni.edu.ge/ka/record/8-podanthum-campanuloides">Podanthum campanuloides</a></th>
+										<td>N. Ketzchoweli</td>
+										<td>29 ივლისი 1929</td>
+										<td>საქართველო</td>
+										<td>in jugo Kharwaslis hevis mtebis in monte Sarchani</td>
+										<td></td>
+										<td>TBI1033671</td>
+									</tr>
+									<tr>
+	                                    <td>
+    	                                    <div class="preflight">
+        	                                    <div class="custom-control custom-checkbox">
+            	                                    <input type="checkbox" class="custom-control-input" id="customCheck7" onchange="checkboxes(7)">
+                	                                <label class="custom-control-label" for="customCheck7"></label>
+                    	                        </div>
+                        	                    <button data-id="7" data-slug="7-podanthum-campanuloides" class="btn btn-link text-darker u-none show-info-modal">
+                                            	    <i class="bi bi-info-circle-fill"></i>
+	                                            </button>
+    	                                    </div>
+        	                            </td>
+            	                        <th><a href="https://tbi.iliauni.edu.ge/ka/record/7-podanthum-campanuloides">Podanthum campanuloides</a></th>
+										<td>W. Lipsky</td>
+										<td>25 ივლისი 1892</td>
+										<td>რუსეთი</td>
+										<td>Ледникъ Безенгй</td>
+										<td></td>
+										<td>TBI1033627</td>
+									</tr>
+								</tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	</main>
 	<footer class="footer">
 		<div class="container">
