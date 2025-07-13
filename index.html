@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 	<script src="script.js"></script>
 </head>
@@ -35,15 +36,31 @@
 	<main>
 		<div class="blog-wrapper">
 			<div class="blog">
-				<h1>Belobog History & Culture Museum</h1>
-				<div class="blog-maincol">
-					<div class="blog-maincol-row">
-						<article class="blog-articles">
-							<h2>Join us to learn more about Belobog City</h2>
-							<p>Visit the Belobog museum to explore the last 700 years of our magnificent city's history.</p>
-						</article>
-					</div>
-				</div>
+				<div class="welcome">
+    		        <h1>თბილისის სახელმწიფო უნივერსიტეტის ჰერბარიუმის ციფრული კოლექცია</h1>
+    		    </div>
+    		    <form action="http://127.0.0.1:5501/herbarium.html" class="main-page-search-form">
+    		        <div class="input-group main-page-search">
+    		            <select name="home_filter_type" required>
+    		                <option selected disabled value="">არჩევა</option>
+    		                <option value="family">ოჯახი</option>
+    		                <option value="genus">გვარი</option>
+            		        <option value="specific_epithet">სახეობის ეპითეტი</option>
+                    		<option
+    		                    value="infra_specific_epithet">შიგასახეობრივი ეპითეტი</option>
+            		        <option value="author">ავტორი</option>
+                    		<option value="name">პირველადი საკოლექციო ნომერი</option>
+    		            </select>
+            		    <input type="text" name="home_filter_value" class="form-control form-control-lg"
+                    		   placeholder="მოძებნეთ ჩანაწერი" aria-label="Search Items"
+		                       aria-describedby="searchItems" required>
+        		        <div class="input-group-append">
+		                    <button class="btn btn-dark px-3" type="submit" id="searchItems">
+        		                <i class="bi bi-search"></i>
+                		    </button>
+		                </div>
+        		    </div>
+		        </form>
 			</div>
 		</div>
 	</main>
