@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>The Belobog History & Culture Museum</title>
+	<title>Tbilisi State University Digital Herbarium</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
@@ -31,48 +31,571 @@
 		</nav>
 		<script src="modal.js"></script>
 	</header>
-	<main>
-		<div class="blog-wrapper">
-			<div class="blog">
-				<div class="blog-maincol">
-					<div class="blog-maincol-row">
-						<article class="blog-articles">
-							<h2>Unearthing the Hidden Secrets of Our City's Archaeological Finds</h2>
-							<p>Step into the captivating world of archaeology as we delve deep into the hidden secrets of our city's past.
-								In our latest exhibition, we invite you to embark on a journey through time, exploring the artifacts and discoveries that shed light on the lives of those who came before us.
-								From ancient tools and pottery to intricate jewelry and ceremonial objects, each artifact tells a unique story, unveiling the rich cultural tapestry of our city's early inhabitants.
-								Join us as we uncover the mysteries of the past, piecing together fragments of history and gaining a deeper understanding of our roots.
-								Don't miss this extraordinary opportunity to connect with our city's ancient heritage and witness the marvels of archaeological exploration.</p>
-							<img src="img/archaeological.png">
-						</article>
-					</div>
-					<div class="blog-maincol-row">
-						<article class="blog-articles">
-							<h2>Celebrating Local Talent: Spotlight on Our City's Emerging Artists</h2>
-							<p>We are thrilled to showcase the incredible talent within our city's vibrant art scene.
-								In our latest exhibition, we shine a spotlight on a diverse group of emerging artists who are pushing boundaries and redefining artistic expression.
-								From bold abstract paintings to immersive installations, this collection captures the essence of our city's creative spirit.
-								Discover the unique perspectives, captivating narratives, and awe-inspiring techniques that make these artists stand out. Join us in celebrating the power of art to inspire, challenge, and provoke thought.
-								Be part of the movement and witness the dynamic energy of our city's artistic community.</p>
-							<img src="img/artists.png">
-							
-						</article>
-					</div>
-					<div class="blog-maincol-row">
-						<article class="blog-articles">
-							<h2>Preserving Our Past: Restoring Architectural Gems of Our City</h2>
-							<p>Our city is blessed with a rich architectural heritage that tells the story of our evolving identity.
-								In our ongoing efforts to preserve our past, we have embarked on a mission to restore and breathe new life into our architectural gems.
-								From majestic landmarks to hidden gems tucked away in quaint neighborhoods, these buildings are a testament to our city's history and cultural legacy.
-								Our dedicated team of preservationists, architects, and craftsmen work tirelessly to revive these structures, ensuring that future generations can experience the beauty and significance of our architectural heritage.
-								Join us in celebrating the revitalization of our city's architectural treasures and learn about the painstaking process of restoration that brings these magnificent buildings back to their former glory.</p>
-							<img src="img/cityscape.png">
-						</article>
+	<div class="main-wrapper">
+		<div class="container-fluid my-4">
+			<div class="page-title-holder">
+				<h1 class="page-title">მონაცემების ექსპორტი</h1>
+			</div>
+			<form action="https://tbi.iliauni.edu.ge/ka/data-export" method="POST" class="row bottom-m" onchange="activate()">
+				<input type="hidden" name="_token" value="SqPCTn3W9i5Xy33sB844MuxvPERx2RVw9xHD5deV">
+				<div class="col-lg-8 col-md-12 mb-4">
+					<p class="pl-2">აირჩიეთ/მონიშნეთ სასურველი პარამეტრები და დააჭირეთ ღილაკს "გადმოწერა".</p>
+					<div class="card">
+						<div class="card-body">
+							<div class="data-export-container">
+								<div class="form-group row">
+									<label for="data_family" class="col-lg-2 col-form-label">ოჯახი</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="family" multiple data-selected-text-format="count" data-width="100%" name="families_id[]" data-select2-id="19" tabindex="-1" aria-hidden="true"></select>
+										<span class="select2 select2-container select2-container--bootstrap4 select2-container--below" dir="ltr" data-select2-id="20" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+									<label for="data_genus" class="col-lg-2 col-form-label">გვარი</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="genus" multiple="" data-selected-text-format="count" data-width="100%" name="genuses_id[]" data-select2-id="21" tabindex="-1" aria-hidden="true">
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4 select2-container--below" dir="ltr" data-select2-id="22" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="data_author" class="col-lg-2 col-form-label">ავტორი</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="author" multiple data-selected-text-format="count" data-width="100%" name="families_id[]" data-select2-id="19" tabindex="-1" aria-hidden="true"></select>
+										<span class="select2 select2-container select2-container--bootstrap4 select2-container--below" dir="ltr" data-select2-id="20" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+									<label for="data_type_status" class="col-lg-2 col-form-label">ტიპი</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="type" multiple data-selected-text-format="count" data-width="100%" name="families_id[]" data-select2-id="19" tabindex="-1" aria-hidden="true"></select>
+										<span class="select2 select2-container select2-container--bootstrap4 select2-container--below" dir="ltr" data-select2-id="20" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="data_life_form" class="col-lg-2 col-form-label">სასიცოცხლო ფორმა</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="life_form" multiple data-selected-text-format="count" data-width="100%" name="families_id[]" data-select2-id="19" tabindex="-1" aria-hidden="true"></select>
+										<span class="select2 select2-container select2-container--bootstrap4 select2-container--below" dir="ltr" data-select2-id="20" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+
+									<label for="data_collectors" class="col-lg-2 col-form-label">შემგროვებელი</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="person" multiple data-selected-text-format="count" data-width="100%" name="families_id[]" data-select2-id="19" tabindex="-1" aria-hidden="true"></select>
+										<span class="select2 select2-container select2-container--bootstrap4 select2-container--below" dir="ltr" data-select2-id="20" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="data_collection_date_from" class="col-lg-2 col-form-label">შეგრ. თარიღი (დან)</label>
+									<div class="col-lg-4 filter-date">
+										<input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="data_collection_day_from">
+										<select class="selectpicker select2-hidden-accessible" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="data_collection_date_from" data-select2-id="1" tabindex="-1" aria-hidden="true">
+											<option disabled value="" selected>არჩევა</option>
+											<option value="1">იანვარი</option>
+											<option value="2">თებერვალი</option>
+											<option value="3">მარტი</option>
+											<option value="4">აპრილი</option>
+											<option value="5">მაისი</option>
+											<option value="6">ივნისი</option>
+											<option value="7">ივლისი</option>
+											<option value="8">აგვისტო</option>
+											<option value="9">სექტემბერი</option>
+											<option value="10">ოქტომბერი</option>
+											<option value="11">ნოემბერი</option>
+											<option value="12">დეკემბერი</option>
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="2" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="Choose..." tabindex="0" aria-disabled="false" aria-labelledby="select2-data_collection_date_from-mm-container">
+													<span class="select2-selection__rendered" id="select2-data_collection_date_from-mm-container" role="textbox" aria-readonly="true">
+														<span class="select2-selection__placeholder">არჩევა</span>
+													</span>
+													<span class="select2-selection__arrow" role="presentation">
+														<b role="presentation"></b>
+													</span>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+										<input type="number" min="0" class="form-control" placeholder="წელი" name="data_collection_year_from">
+									</div>
+									<label for="data_collection_date_to" class="col-lg-2 col-form-label">შეგრ. თარიღი (მდე)</label>
+									<div class="col-lg-4 filter-date">
+										<input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="data_collection_day_to">
+										<select class="selectpicker select2-hidden-accessible" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="data_collection_date_to" data-select2-id="4" tabindex="-1" aria-hidden="true">
+											<option disabled="" value="" selected="" data-select2-id="6">არჩევა</option>
+											<option value="1">იანვარი</option>
+											<option value="2">თებერვალი</option>
+											<option value="3">მარტი</option>
+											<option value="4">აპრილი</option>
+											<option value="5">მაისი</option>
+											<option value="6">ივნისი</option>
+											<option value="7">ივლისი</option>
+											<option value="8">აგვისტო</option>
+											<option value="9">სექტემბერი</option>
+											<option value="10">ოქტომბერი</option>
+											<option value="11">ნოემბერი</option>
+											<option value="12">დეკემბერი</option>
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="5" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="Choose..." tabindex="0" aria-disabled="false" aria-labelledby="select2-data_collection_date_to-op-container">
+													<span class="select2-selection__rendered" id="select2-data_collection_date_to-op-container" role="textbox" aria-readonly="true">
+														<span class="select2-selection__placeholder">არჩევა</span>
+													</span>
+													<span class="select2-selection__arrow" role="presentation">
+														<b role="presentation"></b>
+													</span>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+										<input type="number" min="0" class="form-control" placeholder="წელი" name="data_collection_year_to">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="data_identifier" class="col-lg-2 col-form-label">გამრკვევი</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="person" multiple="" data-selected-text-format="count" data-width="100%" name="identifiers_id[]" data-select2-id="31" tabindex="-1" aria-hidden="true">
+										</select><span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="32" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+									</div>
+									<label for="data_identification_date_from" class="col-lg-2 col-form-label">გარკვევის თარიღი (დან)</label>
+									<div class="col-lg-4 filter-date">
+										<input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="data_identification_day_from">
+										<select class="selectpicker select2-hidden-accessible" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="data_identification_date_from" data-select2-id="7" tabindex="-1" aria-hidden="true">
+											<option disabled="" value="" selected="" data-select2-id="9">არჩევა</option>
+											<option value="1">იანვარი</option>
+											<option value="2">თებერვალი</option>
+											<option value="3">მარტი</option>
+											<option value="4">აპრილი</option>
+											<option value="5">მაისი</option>
+											<option value="6">ივნისი</option>
+											<option value="7">ივლისი</option>
+											<option value="8">აგვისტო</option>
+											<option value="9">სექტემბერი</option>
+											<option value="10">ოქტომბერი</option>
+											<option value="11">ნოემბერი</option>
+											<option value="12">დეკემბერი</option>
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="8" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="Choose..." tabindex="0" aria-disabled="false" aria-labelledby="select2-data_identification_date_from-e3-container">
+													<span class="select2-selection__rendered" id="select2-data_identification_date_from-e3-container" role="textbox" aria-readonly="true">
+														<span class="select2-selection__placeholder">არჩევა</span>
+													</span>
+													<span class="select2-selection__arrow" role="presentation">
+														<b role="presentation"></b>
+													</span>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+										<input type="number" min="0" class="form-control" placeholder="წელი" name="data_identification_year_from">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="data_identification_date_to" class="col-lg-2 col-form-label">გარკვევის თარიღი (მდე)</label>
+									<div class="col-lg-4 filter-date">
+										<input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="data_identification_day_to">
+										<select class="selectpicker select2-hidden-accessible" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="data_identification_date_to" data-select2-id="10" tabindex="-1" aria-hidden="true">
+											<option disabled="" value="" selected="" data-select2-id="12">არჩევა</option>
+											<option value="1">იანვარი</option>
+											<option value="2">თებერვალი</option>
+											<option value="3">მარტი</option>
+											<option value="4">აპრილი</option>
+											<option value="5">მაისი</option>
+											<option value="6">ივნისი</option>
+											<option value="7">ივლისი</option>
+											<option value="8">აგვისტო</option>
+											<option value="9">სექტემბერი</option>
+											<option value="10">ოქტომბერი</option>
+											<option value="11">ნოემბერი</option>
+											<option value="12">დეკემბერი</option>
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="11" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="Choose..." tabindex="0" aria-disabled="false" aria-labelledby="select2-data_identification_date_to-5e-container">
+													<span class="select2-selection__rendered" id="select2-data_identification_date_to-5e-container" role="textbox" aria-readonly="true">
+														<span class="select2-selection__placeholder">არჩევა</span>
+													</span>
+													<span class="select2-selection__arrow" role="presentation">
+														<b role="presentation"></b>
+													</span>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+										<input type="number" min="0" class="form-control" placeholder="წელი" name="data_identification_year_to">
+									</div>
+									<label for="data_country" class="col-lg-2 col-form-label">ქვეყანა</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="country" multiple="" data-selected-text-format="count" data-width="100%" name="countries_id[]" data-select2-id="33" tabindex="-1" aria-hidden="true">
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="34" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="data_region" class="col-lg-2 col-form-label">რეგიონი</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="region" multiple="" data-selected-text-format="count" data-width="100%" name="regions_id[]" data-select2-id="35" tabindex="-1" aria-hidden="true">
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="36" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+									<label for="data_municipality" class="col-lg-2 col-form-label">მუნიციპალიტეტი</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="municipality" multiple="" data-selected-text-format="count" data-width="100%" name="municipalities_id[]" data-select2-id="37" tabindex="-1" aria-hidden="true">
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="38" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="data_locality" class="col-lg-2 col-form-label">ლოკაცია</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="place" multiple="" data-selected-text-format="count" data-width="100%" name="localities_id[]" data-select2-id="39" tabindex="-1" aria-hidden="true">
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="40" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+									<label for="data_habitat" class="col-lg-2 col-form-label">ჰაბიტატი</label>
+									<div class="col-lg-4">
+										<select class="selectpicker-remote-search select2-hidden-accessible" data-type="habitat" multiple="" data-selected-text-format="count" data-width="100%" name="habitates_id[]" data-select2-id="41" tabindex="-1" aria-hidden="true">
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="42" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+													<ul class="select2-selection__rendered">
+														<li class="select2-search select2-search--inline">
+															<input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="არჩევა" style="width: 365.328px;">
+														</li>
+													</ul>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="data_altitude" class="col-lg-2 col-form-label">სიმაღლე</label>
+									<div class="col-lg-4 altitude">
+										<input type="number" min="0" class="form-control" name="altitude">
+										<select class="selectpicker select2-hidden-accessible" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="altitude_value" data-select2-id="13" tabindex="-1" aria-hidden="true">
+											<option disabled="" value="" selected="" data-select2-id="15">არჩევა</option>
+											<option value="meter">მეტრი</option>
+											<option value="feet">ფუტი</option>
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="14" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="Choose..." tabindex="0" aria-disabled="false" aria-labelledby="select2-altitude_value-eh-container">
+													<span class="select2-selection__rendered" id="select2-altitude_value-eh-container" role="textbox" aria-readonly="true">
+														<span class="select2-selection__placeholder">არჩევა</span>
+													</span>
+													<span class="select2-selection__arrow" role="presentation">
+														<b role="presentation"></b>
+													</span>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+									<label for="data_altitude_range" class="col-lg-2 col-form-label">სიმაღლის დიაპაზონი</label>
+									<div class="col-lg-4 altitude range">
+										<input type="number" min="0" class="form-control" placeholder="სიმაღლე (დან)" name="altitude_from">
+										<input type="number" min="0" class="form-control" placeholder="სიმაღლე (მდე)" name="altitude_to">
+										<select class="selectpicker select2-hidden-accessible" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="altitude_range_value" data-select2-id="16" tabindex="-1" aria-hidden="true">
+											<option disabled="" value="" selected="" data-select2-id="18">არჩევა</option>
+											<option value="meter">მეტრი</option>
+											<option value="feet">ფუტი</option>
+										</select>
+										<span class="select2 select2-container select2-container--bootstrap4" dir="ltr" data-select2-id="17" style="width: 100%;">
+											<span class="selection">
+												<span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="Choose..." tabindex="0" aria-disabled="false" aria-labelledby="select2-altitude_range_value-hp-container">
+													<span class="select2-selection__rendered" id="select2-altitude_range_value-hp-container" role="textbox" aria-readonly="true">
+														<span class="select2-selection__placeholder">არჩევა</span>
+													</span>
+													<span class="select2-selection__arrow" role="presentation">
+														<b role="presentation"></b>
+													</span>
+												</span>
+											</span>
+											<span class="dropdown-wrapper" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</main>
+				<div class="col-lg-4 col-md-12 mb-4">
+					<div class="card">
+						<div class="card-body">
+							<div class="data-export-control">
+								<div class="check-all">
+									<h2>ველები</h2>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="checkAll" onclick="checkall(this);">
+										<label class="custom-control-label" for="checkAll">ყველა</label>
+									</div>
+								</div>
+								<div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="voucher_id" name="column[voucher_id]">
+                                    <label class="custom-control-label" for="voucher_id">საიდენტიფიკაციო ნომერი</label>
+                                </div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="project_title" name="column[project_title]">
+									<label class="custom-control-label" for="project_title">პროექტის სახელწოდება</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="life_form" name="column[life_form]">
+									<label class="custom-control-label" for="life_form">სასიცოცხლო ფორმა</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="collector" name="column[collector]">
+									<label class="custom-control-label" for="collector">შემგროვებელი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="collector_no" name="column[collector_no]">
+									<label class="custom-control-label" for="collector_no">შემგროვებლის ნომერი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="collection_date" name="column[collection_date]">
+									<label class="custom-control-label" for="collection_date">შეგროვების თარიღი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="country" name="column[country]">
+									<label class="custom-control-label" for="country">ქვეყანა</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="region" name="column[region]">
+									<label class="custom-control-label" for="region">რეგიონი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="municipality" name="column[municipality]">
+									<label class="custom-control-label" for="municipality">მუნიციპალიტეტი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="place" name="column[place]">
+									<label class="custom-control-label" for="place">ლოკაცია</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="collection_note" name="column[collection_note]">
+									<label class="custom-control-label" for="collection_note">შემგროვებლის შენიშვნები</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="longitude" name="column[longitude]">
+									<label class="custom-control-label" for="longitude">გრძედი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="latitude" name="column[latitude]">
+									<label class="custom-control-label" for="latitude">განედი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="habitat" name="column[habitat]">
+									<label class="custom-control-label" for="habitat">ჰაბიტატი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="altitude" name="column[altitude]">
+									<label class="custom-control-label" for="altitude">სიმაღლე</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="altitude_from" name="column[altitude_from]">
+									<label class="custom-control-label" for="altitude_from">სიმაღლე (დან)</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="altitude_to" name="column[altitude_to]">
+									<label class="custom-control-label" for="altitude_to">სიმაღლე (მდე)</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="value" name="column[value]">
+									<label class="custom-control-label" for="value">საზ. ერთეული</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="inclination" name="column[inclination]">
+									<label class="custom-control-label" for="inclination">დახრილობის კუთხე</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="exposure" name="column[exposure]">
+									<label class="custom-control-label" for="exposure">ექსპოზიცია</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="family" name="column[family]">
+									<label class="custom-control-label" for="family">ოჯახი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="genus" name="column[genus]">
+									<label class="custom-control-label" for="genus">გვარი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="specific_epithet" name="column[specific_epithet]">
+									<label class="custom-control-label" for="specific_epithet">სახეობის ეპითეტი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="infra_specific_epithet" name="column[infra_specific_epithet]">
+									<label class="custom-control-label" for="infra_specific_epithet">შიგასახეობრივი ეპითეტი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="author_in_parenthesis" name="column[author_in_parenthesis]">
+									<label class="custom-control-label" for="author_in_parenthesis">ავტორი ფრჩხილებში</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="author" name="column[author]">
+									<label class="custom-control-label" for="author">ავტორი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="name" name="column[name]">
+									<label class="custom-control-label" for="name">პირველადი საკოლექციო ნომერი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="type" name="column[type]">
+									<label class="custom-control-label" for="type">ტიპი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="identifier" name="column[identifier]">
+									<label class="custom-control-label" for="identifier">გამრკვევი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="identification_date" name="column[identification_date]">
+									<label class="custom-control-label" for="identification_date">გარკვევის თარიღი</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="identification_notes" name="column[identification_notes]">
+									<label class="custom-control-label" for="identification_notes">გამრკვევის შენიშვნები</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="other_notes" name="column[other_notes]">
+									<label class="custom-control-label" for="other_notes">სხვა შენიშვნები</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="last_modified_at" name="column[last_modified_at]">
+									<label class="custom-control-label" for="last_modified_at">ბოლოს განახლდა</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 data-export-form-control">
+					<div class="loader-holder">
+						<div class="loader d-none">
+							<div class="spinner-border" role="status">
+								<span class="sr-only">client.data_export.loading</span>
+							</div>
+							<div class="notification">client.data_export.preparing_data</div>
+						</div>
+					</div>
+					<div class="data-download-buttons">
+						<a class="btn btn-danger" href="https://tbi.iliauni.edu.ge/ka/data-export">გაუქმება</a>
+						<button type="submit" class="btn btn-primary" id="btnGenerate" disabled>გადმოწერა</button>
+					</div>
+				</div>
+			</form>
+
+</div>
+
+</div>
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
