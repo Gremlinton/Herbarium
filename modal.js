@@ -164,3 +164,11 @@ function checkall(masterCheckbox) {
         checkbox.checked = isChecked;
     });
 }
+$(document).ready(function() {
+    $('select[name="data_collection_date_from"]').select2({
+      theme: 'bootstrap4',
+      placeholder: 'არჩევა',
+      width: '100%' // Match the container width
+    });
+  });
+  
