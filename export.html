@@ -34,189 +34,189 @@
 	<div class="main-wrapper">
 		<div class="container-fluid my-4">
 			<div class="page-title-holder">
-				<h1 class="page-title">მონაცემების ექსპორტი</h1>
-				<p class="pl-2">აირჩიეთ/მონიშნეთ სასურველი პარამეტრები და დააჭირეთ ღილაკს "გადმოწერა".</p>
+				<h1 class="page-title">Data Export</h1>
+				<p class="pl-2">Select the desired settings and click "Downlaod" button to prepare and download</p>
 			</div>
-			<form action="https://tbi.iliauni.edu.ge/ka/data-export" method="POST" class="row bottom-m" onchange="activate()">
+			<form action="http://127.0.0.1:5501/export.html" method="POST" class="row bottom-m" onchange="activate()">
 				<input type="hidden" name="_token" value="SqPCTn3W9i5Xy33sB844MuxvPERx2RVw9xHD5deV">
 				<div class="col-lg-8 col-md-12 mb-4">
 					<div class="card">
 						<div class="card-body">
 							<div class="data-export-container">
 								<div class="form-group row">
-									<label for="data_family" class="col-lg-2 col-form-label">ოჯახი</label>
+									<label for="data_family" class="col-lg-2 col-form-label">Family</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="family" multiple data-selected-text-format="count" data-width="100%" name="families_id[]">
 										</select>
 									</div>
-									<label for="data_genus" class="col-lg-2 col-form-label">გვარი</label>
+									<label for="data_genus" class="col-lg-2 col-form-label">Genus</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="genus" multiple data-selected-text-format="count" data-width="100%" name="genuses_id[]">
 										</select>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="data_author" class="col-lg-2 col-form-label">ავტორი</label>
+									<label for="data_author" class="col-lg-2 col-form-label">Author</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="person"  multiple data-selected-text-format="count" data-width="100%" name="authors_id[]">
 										</select>
 									</div>
-									<label for="data_type_status" class="col-lg-2 col-form-label">ტიპი</label>
+									<label for="data_type_status" class="col-lg-2 col-form-label">Type</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="type" multiple data-selected-text-format="count" data-width="100%" name="types_id[]">
 										</select>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="data_life_form" class="col-lg-2 col-form-label">სასიცოცხლო ფორმა</label>
+									<label for="data_life_form" class="col-lg-2 col-form-label">Life form</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="life_form" multiple data-selected-text-format="count" data-width="100%" name="life_forms_id[]">
 										</select>
 									</div>
-									<label for="data_collectors" class="col-lg-2 col-form-label">შემგროვებელი</label>
+									<label for="data_collectors" class="col-lg-2 col-form-label">Collector</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="person" multiple data-selected-text-format="count" data-width="100%" name="collectors_id[]">
 										</select>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="data_collection_date_from" class="col-lg-2 col-form-label">შეგრ. თარიღი (დან)</label>
+									<label for="data_collection_date_from" class="col-lg-2 col-form-label">Coll. Date (From)</label>
 									<div class="col-lg-4 filter-date">
-										<input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="data_collection_day_from">
+										<input type="number" min="1" max="31" class="form-control" placeholder="Day" name="data_collection_day_from">
 										<select class="selectpicker" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="data_collection_date_from">
-											<option disabled value="" selected>არჩევა</option>
-											<option value="1">იანვარი</option>
-											<option value="2">თებერვალი</option>
-											<option value="3">მარტი</option>
-											<option value="4">აპრილი</option>
-											<option value="5">მაისი</option>
-											<option value="6">ივნისი</option>
-											<option value="7">ივლისი</option>
-											<option value="8">აგვისტო</option>
-											<option value="9">სექტემბერი</option>
-											<option value="10">ოქტომბერი</option>
-											<option value="11">ნოემბერი</option>
-											<option value="12">დეკემბერი</option>
+											<option selected disabled value="">Choose</option>
+											<option value="1" >January</option>
+											<option value="2" >February</option>
+											<option value="3" >March</option>
+											<option value="4" >April</option>
+											<option value="5" >May</option>
+											<option value="6" >June</option>
+											<option value="7" >July</option>
+											<option value="8" >August</option>
+											<option value="9" >September</option>
+											<option value="10" >October</option>
+											<option value="11" >November</option>
+											<option value="12" >December</option>
 										</select>
-										<input type="number" min="0" class="form-control" placeholder="წელი" name="data_collection_year_from">
+										<input type="number" min="1" class="form-control" placeholder="Year" name="data_collection_year_from">
 									</div>
-									<label for="data_collection_date_to" class="col-lg-2 col-form-label">შეგრ. თარიღი (მდე)</label>
+									<label for="data_collection_date_to" class="col-lg-2 col-form-label">Coll. Date (To)</label>
 									<div class="col-lg-4 filter-date">
-										<input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="data_collection_day_to">
+										<input type="number" min="1" max="31" class="form-control" placeholder="Day" name="data_collection_day_to">
 										<select class="selectpicker" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="data_collection_date_to">
-											<option disabled value="" selected>არჩევა</option>
-											<option value="1">იანვარი</option>
-											<option value="2">თებერვალი</option>
-											<option value="3">მარტი</option>
-											<option value="4">აპრილი</option>
-											<option value="5">მაისი</option>
-											<option value="6">ივნისი</option>
-											<option value="7">ივლისი</option>
-											<option value="8">აგვისტო</option>
-											<option value="9">სექტემბერი</option>
-											<option value="10">ოქტომბერი</option>
-											<option value="11">ნოემბერი</option>
-											<option value="12">დეკემბერი</option>
+											<option selected disabled value="">Choose</option>
+											<option value="1" >January</option>
+											<option value="2" >February</option>
+											<option value="3" >March</option>
+											<option value="4" >April</option>
+											<option value="5" >May</option>
+											<option value="6" >June</option>
+											<option value="7" >July</option>
+											<option value="8" >August</option>
+											<option value="9" >September</option>
+											<option value="10" >October</option>
+											<option value="11" >November</option>
+											<option value="12" >December</option>
 										</select>
-										<input type="number" min="0" class="form-control" placeholder="წელი" name="data_collection_year_to">
+										<input type="number" min="1" class="form-control" placeholder="Year" name="data_collection_year_to">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="data_identifier" class="col-lg-2 col-form-label">გამრკვევი</label>
+									<label for="data_identifier" class="col-lg-2 col-form-label">Identifier</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="person" multiple data-selected-text-format="count" data-width="100%" name="identifiers_id[]">
 										</select>
 									</div>
-									<label for="data_identification_date_from" class="col-lg-2 col-form-label">გარკვევის თარიღი (დან)</label>
+									<label for="data_identification_date_from" class="col-lg-2 col-form-label">Idetification Date (From)</label>
 									<div class="col-lg-4 filter-date">
-										<input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="data_identification_day_from">
+										<input type="number" min="1" max="31" class="form-control" placeholder="Day" name="data_identification_day_from">
 										<select class="selectpicker" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="data_identification_date_from">
-											<option disabled value="" selected>არჩევა</option>
-											<option value="1">იანვარი</option>
-											<option value="2">თებერვალი</option>
-											<option value="3">მარტი</option>
-											<option value="4">აპრილი</option>
-											<option value="5">მაისი</option>
-											<option value="6">ივნისი</option>
-											<option value="7">ივლისი</option>
-											<option value="8">აგვისტო</option>
-											<option value="9">სექტემბერი</option>
-											<option value="10">ოქტომბერი</option>
-											<option value="11">ნოემბერი</option>
-											<option value="12">დეკემბერი</option>
+											<option selected disabled value="">Choose</option>
+											<option value="1" >January</option>
+											<option value="2" >February</option>
+											<option value="3" >March</option>
+											<option value="4" >April</option>
+											<option value="5" >May</option>
+											<option value="6" >June</option>
+											<option value="7" >July</option>
+											<option value="8" >August</option>
+											<option value="9" >September</option>
+											<option value="10" >October</option>
+											<option value="11" >November</option>
+											<option value="12" >December</option>
 										</select>
-										<input type="number" min="0" class="form-control" placeholder="წელი" name="data_identification_year_from">
+										<input type="number" min="1" class="form-control" placeholder="Year" name="data_identification_year_from">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="data_identification_date_to" class="col-lg-2 col-form-label">გარკვევის თარიღი (მდე)</label>
+									<label for="data_identification_date_to" class="col-lg-2 col-form-label">Identification Date (to)</label>
 									<div class="col-lg-4 filter-date">
-										<input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="data_identification_day_to">
+										<input type="number" min="1" max="31" class="form-control" placeholder="Day" name="data_identification_day_to">
 										<select class="selectpicker" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="data_identification_date_to">
-											<option disabled value="" selected>არჩევა</option>
-											<option value="1">იანვარი</option>
-											<option value="2">თებერვალი</option>
-											<option value="3">მარტი</option>
-											<option value="4">აპრილი</option>
-											<option value="5">მაისი</option>
-											<option value="6">ივნისი</option>
-											<option value="7">ივლისი</option>
-											<option value="8">აგვისტო</option>
-											<option value="9">სექტემბერი</option>
-											<option value="10">ოქტომბერი</option>
-											<option value="11">ნოემბერი</option>
-											<option value="12">დეკემბერი</option>
+											<option selected disabled value="">Choose</option>
+											<option value="1" >January</option>
+											<option value="2" >February</option>
+											<option value="3" >March</option>
+											<option value="4" >April</option>
+											<option value="5" >May</option>
+											<option value="6" >June</option>
+											<option value="7" >July</option>
+											<option value="8" >August</option>
+											<option value="9" >September</option>
+											<option value="10" >October</option>
+											<option value="11" >November</option>
+											<option value="12" >December</option>
 										</select>
-										<input type="number" min="0" class="form-control" placeholder="წელი" name="data_identification_year_to">
+										<input type="number" min="1" class="form-control" placeholder="Year" name="data_identification_year_to">
 									</div>
-									<label for="data_country" class="col-lg-2 col-form-label">ქვეყანა</label>
+									<label for="data_country" class="col-lg-2 col-form-label">Country</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="country" multiple data-selected-text-format="count" data-width="100%" name="countries_id[]">
 										</select>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="data_region" class="col-lg-2 col-form-label">რეგიონი</label>
+									<label for="data_region" class="col-lg-2 col-form-label">Region</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="region" multiple data-selected-text-format="count" data-width="100%" name="regions_id[]">
 										</select>
 									</div>
-									<label for="data_municipality" class="col-lg-2 col-form-label">მუნიციპალიტეტი</label>
+									<label for="data_municipality" class="col-lg-2 col-form-label">Municipality</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="municipality" multiple data-selected-text-format="count" data-width="100%" name="municipalities_id[]">
 										</select>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="data_locality" class="col-lg-2 col-form-label">ლოკაცია</label>
+									<label for="data_locality" class="col-lg-2 col-form-label">Locality</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="place" multiple data-selected-text-format="count" data-width="100%" name="localities_id[]">
 										</select>
 									</div>
-									<label for="data_habitat" class="col-lg-2 col-form-label">ჰაბიტატი</label>
+									<label for="data_habitat" class="col-lg-2 col-form-label">Habitat</label>
 									<div class="col-lg-4">
 										<select class="selectpicker-remote-search" data-type="habitat" multiple data-selected-text-format="count" data-width="100%" name="habitates_id[]">
 										</select>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="data_altitude" class="col-lg-2 col-form-label">სიმაღლე</label>
+									<label for="data_altitude" class="col-lg-2 col-form-label">Altitude</label>
 									<div class="col-lg-4 altitude">
 										<input type="number" min="0" class="form-control" name="altitude">
 										<select class="selectpicker" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="altitude_value">
-											<option disabled value="" selected>არჩევა</option>
-											<option value="meter">მეტრი</option>
-											<option value="feet">ფუტი</option>
+											<option disabled value="" selected>Value</option>
+											<option value="meter">Meters</option>
+											<option value="feet">Feet</option>
 										</select>
 									</div>
-									<label for="data_altitude_range" class="col-lg-2 col-form-label">სიმაღლის დიაპაზონი</label>
+									<label for="data_altitude_range" class="col-lg-2 col-form-label">Altitude Range</label>
 									<div class="col-lg-4 altitude range">
-										<input type="number" min="0" class="form-control" placeholder="სიმაღლე (დან)" name="altitude_from">
-										<input type="number" min="0" class="form-control" placeholder="სიმაღლე (მდე)" name="altitude_to">
+										<input type="number" min="0" class="form-control" placeholder="Altitude (From)" name="altitude_from">
+										<input type="number" min="0" class="form-control" placeholder="Altitude (to)" name="altitude_to">
 										<select class="selectpicker" data-live-search="false" title="Choose..." data-selected-text-format="count" data-width="100%" name="altitude_range_value">
-											<option disabled value="" selected>არჩევა</option>
-											<option value="meter">მეტრი</option>
-											<option value="feet">ფუტი</option>
+											<option selected disabled value="">Value</option>
+											<option value="meter" >Meters</option>
+											<option value="feet" >Feet</option>
 										</select>
 									</div>
 								</div>
@@ -229,143 +229,143 @@
 						<div class="card-body">
 							<div class="data-export-control">
 								<div class="check-all">
-									<h2>ველები</h2>
+									<h2>Fields</h2>
 									<div class="custom-control custom-checkbox">
 										<input type="checkbox" class="custom-control-input" id="checkAll" onclick="checkall(this);">
-										<label class="custom-control-label invisible" for="checkAll">ყველა</label>
+										<label class="custom-control-label invisible" for="checkAll">All</label>
 									</div>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="voucher_id" name="column[voucher_id]">
-									<label class="custom-control-label" for="voucher_id">საიდენტიფიკაციო ნომერი</label>
+									<label class="custom-control-label" for="voucher_id">Voucher ID</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="project_title" name="column[project_title]">
-									<label class="custom-control-label" for="project_title">პროექტის სახელწოდება</label>
+									<label class="custom-control-label" for="project_title">Project Title</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="life_form" name="column[life_form]">
-									<label class="custom-control-label" for="life_form">სასიცოცხლო ფორმა</label>
+									<label class="custom-control-label" for="life_form">Life Form</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="collector" name="column[collector]">
-									<label class="custom-control-label" for="collector">შემგროვებელი</label>
+									<label class="custom-control-label" for="collector">Collector</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="collector_no" name="column[collector_no]">
-									<label class="custom-control-label" for="collector_no">შემგროვებლის ნომერი</label>
+									<label class="custom-control-label" for="collector_no">Collector Number</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="collection_date" name="column[collection_date]">
-									<label class="custom-control-label" for="collection_date">შეგროვების თარიღი</label>
+									<label class="custom-control-label" for="collection_date">Collection Date</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="country" name="column[country]">
-									<label class="custom-control-label" for="country">ქვეყანა</label>
+									<label class="custom-control-label" for="country">Country</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="region" name="column[region]">
-									<label class="custom-control-label" for="region">რეგიონი</label>
+									<label class="custom-control-label" for="region">Region</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="municipality" name="column[municipality]">
-									<label class="custom-control-label" for="municipality">მუნიციპალიტეტი</label>
+									<label class="custom-control-label" for="municipality">Municipality</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="place" name="column[place]">
-									<label class="custom-control-label" for="place">ლოკაცია</label>
+									<label class="custom-control-label" for="place">Locality</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="collection_note" name="column[collection_note]">
-									<label class="custom-control-label" for="collection_note">შემგროვებლის შენიშვნები</label>
+									<label class="custom-control-label" for="collection_note">Collector Notes</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="longitude" name="column[longitude]">
-									<label class="custom-control-label" for="longitude">გრძედი</label>
+									<label class="custom-control-label" for="longitude">Longtitude</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="latitude" name="column[latitude]">
-									<label class="custom-control-label" for="latitude">განედი</label>
+									<label class="custom-control-label" for="latitude">Latitude</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="habitat" name="column[habitat]">
-									<label class="custom-control-label" for="habitat">ჰაბიტატი</label>
+									<label class="custom-control-label" for="habitat">Habitat</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="altitude" name="column[altitude]">
-									<label class="custom-control-label" for="altitude">სიმაღლე</label>
+									<label class="custom-control-label" for="altitude">Altitude</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="altitude_from" name="column[altitude_from]">
-									<label class="custom-control-label" for="altitude_from">სიმაღლე (დან)</label>
+									<label class="custom-control-label" for="altitude_from">Altitude (From)</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="altitude_to" name="column[altitude_to]">
-									<label class="custom-control-label" for="altitude_to">სიმაღლე (მდე)</label>
+									<label class="custom-control-label" for="altitude_to">Altitude (To)</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="value" name="column[value]">
-									<label class="custom-control-label" for="value">საზ. ერთეული</label>
+									<label class="custom-control-label" for="value">Value</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="inclination" name="column[inclination]">
-									<label class="custom-control-label" for="inclination">დახრილობის კუთხე</label>
+									<label class="custom-control-label" for="inclination">Inclination</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="exposure" name="column[exposure]">
-									<label class="custom-control-label" for="exposure">ექსპოზიცია</label>
+									<label class="custom-control-label" for="exposure">Exposure</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="family" name="column[family]">
-									<label class="custom-control-label" for="family">ოჯახი</label>
+									<label class="custom-control-label" for="family">Family</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="genus" name="column[genus]">
-									<label class="custom-control-label" for="genus">გვარი</label>
+									<label class="custom-control-label" for="genus">Genus</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="specific_epithet" name="column[specific_epithet]">
-									<label class="custom-control-label" for="specific_epithet">სახეობის ეპითეტი</label>
+									<label class="custom-control-label" for="specific_epithet">Specific Epithet</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="infra_specific_epithet" name="column[infra_specific_epithet]">
-									<label class="custom-control-label" for="infra_specific_epithet">შიგასახეობრივი ეპითეტი</label>
+									<label class="custom-control-label" for="infra_specific_epithet">Intraspecific Epithet</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="author_in_parenthesis" name="column[author_in_parenthesis]">
-									<label class="custom-control-label" for="author_in_parenthesis">ავტორი ფრჩხილებში</label>
+									<label class="custom-control-label" for="author_in_parenthesis">Author (in parenthesis)</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="author" name="column[author]">
-									<label class="custom-control-label" for="author">ავტორი</label>
+									<label class="custom-control-label" for="author">Author</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="name" name="column[name]">
-									<label class="custom-control-label" for="name">პირველადი საკოლექციო ნომერი</label>
+									<label class="custom-control-label" for="name">Primary Accession name</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="type" name="column[type]">
-									<label class="custom-control-label" for="type">ტიპი</label>
+									<label class="custom-control-label" for="type">Type</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="identifier" name="column[identifier]">
-									<label class="custom-control-label" for="identifier">გამრკვევი</label>
+									<label class="custom-control-label" for="identifier">Identifier</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="identification_date" name="column[identification_date]">
-									<label class="custom-control-label" for="identification_date">გარკვევის თარიღი</label>
+									<label class="custom-control-label" for="identification_date">Identification Date</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="identification_notes" name="column[identification_notes]">
-									<label class="custom-control-label" for="identification_notes">გამრკვევის შენიშვნები</label>
+									<label class="custom-control-label" for="identification_notes">Identifier Notes</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="other_notes" name="column[other_notes]">
-									<label class="custom-control-label" for="other_notes">სხვა შენიშვნები</label>
+									<label class="custom-control-label" for="other_notes">Other Notes</label>
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="last_modified_at" name="column[last_modified_at]">
-									<label class="custom-control-label" for="last_modified_at">ბოლოს განახლდა</label>
+									<label class="custom-control-label" for="last_modified_at">Last Modified</label>
 								</div>
 							</div>
 						</div>
@@ -381,8 +381,8 @@
 						</div>
 					</div>
 					<div class="data-download-buttons">
-						<a class="btn btn-danger" href="https://tbi.iliauni.edu.ge/ka/data-export">გაუქმება</a>
-						<button type="submit" class="btn btn-primary" id="btnGenerate" disabled>გადმოწერა</button>
+						<a class="btn btn-danger" href="http://127.0.0.1:5501/export.html">Cancel</a>
+						<button type="submit" class="btn btn-primary" id="btnGenerate" disabled>Download</button>
 					</div>
 				</div>
 			</form>
@@ -453,11 +453,11 @@
 	
 			$(function () {
 				$('.selectpicker').select2({
-					placeholder: 'არჩევა',
+					placeholder: 'Choose',
 					theme: 'bootstrap4'
 				})
 				$('.selectpicker-remote-search').select2({
-					placeholder: 'არჩევა',
+					placeholder: 'Choose',
 					allowClear: true,
 					theme: 'bootstrap4',
 					ajax: {

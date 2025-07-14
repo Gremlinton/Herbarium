@@ -10,6 +10,7 @@
 
 body{
     background-color: #eef5ee;
+    overflow-x: hidden;
 }
 main{
     margin: 0;
@@ -305,7 +306,7 @@ b, strong {
     font-weight: bolder;
 }
 .data-export-control {
-    max-height: 525px;
+    max-height: 485px;
     overflow-y: auto;
 }
 .data-export-control .check-all {
@@ -364,7 +365,6 @@ input[type="radio"], input[type="checkbox"] {
 }
 .custom-control-label::before {
     position: absolute;
-    top: 0.25rem;
     left: -1.5rem;
     display: block;
     width: 1rem;
@@ -519,6 +519,9 @@ nav{
     display:contents;
     align-items:center;
 }
+nav ul {
+    margin-left: -70px;
+}
 .navlink{
     float:left;
     text-align: center;
@@ -537,11 +540,14 @@ nav{
     font-size: 17px;
     display: flex;
 }
-
+.navlink p{
+    font-size: 20px;
+    font-style: bold;
+}
 
 .navlink::after {
     content: "";
-    height: 3px;
+    height: 5px;
     width: 100%;
     background-color: #659645;
     position: absolute;
@@ -1038,10 +1044,10 @@ select {
     z-index: 1;
     display: block;
     min-height: 1.5rem;
-    padding-left: 1.5rem;
+    padding-left: 2rem;
 }
 .invisible{
-    margin-top:-3px;
+    margin-top: 0 !important;
 }
 .invisible::before{
     display: none;
@@ -1063,6 +1069,7 @@ input[type="checkbox" i] {
 }
 .custom-control-label {
     position: relative;
+    margin-top: 5px;
     margin-bottom: 0;
     vertical-align: top;
 }
@@ -1420,9 +1427,12 @@ article h2{
 	font-weight: 300;
 	color:#f8fff4;
 }
+.excol{
+    padding-bottom: 20%;
+}
 
 .blog-wrapper{
-    padding:17% 15%;
+    padding: 10% 17% 30%;
     background: linear-gradient(to bottom,
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.1),
@@ -1442,7 +1452,9 @@ article h2{
     padding: 0 2% 5% 2%;
     text-decoration: none;
 }
-
+.blog-maincol{
+    padding-bottom: 20%;
+}
 .blog-maincol-row{
     display: flex;
     flex-direction: row;
@@ -1743,11 +1755,6 @@ span.price {
 .set-amount {
     max-width: 50px;
     margin-bottom:0px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
 }
 
 @media (max-width: 800px) {

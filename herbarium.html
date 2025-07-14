@@ -39,14 +39,14 @@
 
         <div class="container-fluid my-4">
             <div class="page-title-holder" id="headingOne">
-                <h1 class="page-title">მონაცემების ფილტრი</h1>
+                <h1 class="page-title">Data Filters</h1>
             </div>
             <div class="accordion mb-3" id="accordionFilter">
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionFilter">
                     <div class="card">
                         <div class="card-body">
 							<div class="data-search-accordion">
-                                <form action="https://tbi.iliauni.edu.ge/ka/record" method="GET">
+                                <form action="http://127.0.0.1:5501/herbarium.html" method="GET">
                                     <input type="hidden" name="sort_by" value="created_at">
                                     <input type="hidden" name="sort_dir" value="desc">
                                     <input id="perPage" type="hidden" name="per_page" value="15">
@@ -54,162 +54,161 @@
                                     <input id="withGeolocation" type="hidden" name="with_geolocation" value="">
                                     <div class="form-row">
                                         <div class="form-group col-lg-2">
-                                            <label for="family">ოჯახი</label>
+                                            <label for="family">Family</label>
                                             <input type="text" class="form-control" name="family" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="genus">გვარი</label>
+                                            <label for="genus">Genus</label>
                                             <input type="text" class="form-control" name="genus" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="specificEpithet">სახეობის ეპითეტი</label>
+                                            <label for="specificEpithet">Specific Epithet</label>
                                             <input type="text" class="form-control" name="specific_epithet" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="infraspecificEpithet">შიგასახეობრივი ეპითეტი</label>
+                                            <label for="infraspecificEpithet">Intraspecific Epithet</label>
                                             <input type="text" class="form-control" name="infra_specific_epithet" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="author">ავტორი</label>
+                                            <label for="author">Author</label>
                                             <input type="text" class="form-control" name="author" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="pan">პირვ. საკოლექციო ნომერი</label>
+                                            <label for="pan">Primary Accession name</label>
                                             <input type="text" class="form-control" name="name" value="">
                                         </div>
                                         <div class="form-group col-lg-1">
-                                            <label for="istype">სტატუსი</label>
+                                            <label for="istype">is Type</label>
                                             <select class="form-control" name="is_type" id="isType" onchange="validateStatus()">
-                                                <option value="no"  selected >არა</option>
-                                                <option value="yes" >კი</option>
+                                                <option value="no"  selected >No</option>
+                                                <option value="yes" >Yes</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-lg-1">
-                                            <label for="type">ტიპი</label>
+                                            <label for="type">Type</label>
                                             <select class="form-control" name="type" id="typeStatus" disabled>
-                                                <option selected disabled value="">არჩევა</option>
-												<option value="2" >ტიპი</option>
-												<option value="3" >სინტიპი</option>
-												<option value="4" >იზოტიპი</option>
+                                                <option selected disabled value="">Choose</option>
+												<option value="2" >Type</option>
+												<option value="3" >Sintype</option>
+												<option value="4" >Isotope</option>
 											</select>
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="collectors">შემგროვებელი</label>
+                                            <label for="collectors">Collector(s)</label>
                                             <input type="text" class="form-control" name="collectors" value="">
                                         </div>
                                         <div class="form-group col-lg-3">
-                                            <label>შეგროვების თარიღი</label>
+                                            <label>Collection Date</label>
                                             <div class="filter-date">
-                                                <input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="collection_date_day" value="">
+                                                <input type="number" min="0" max="31" class="form-control" placeholder="Day" name="collection_date_day" value="">
                                                 <select class="form-control" name="collection_date_month">
-                                                    <option selected disabled value="">შეგროვების თვე</option>
-													<option value="1" >იანვარი</option>
-													<option value="2" >თებერვალი</option>
-													<option value="3" >მარტი</option>
-													<option value="4" >აპრილი</option>
-													<option value="5" >მაისი</option>
-													<option value="6" >ივნისი</option>
-													<option value="7" >ივლისი</option>
-													<option value="8" >აგვისტო</option>
-													<option value="9" >სექტემბერი</option>
-													<option value="10" >ოქტომბერი</option>
-													<option value="11" >ნოემბერი</option>
-													<option value="12" >დეკემბერი</option>
+                                                    <option selected disabled value="">Month</option>
+													<option value="1" >January</option>
+													<option value="2" >February</option>
+													<option value="3" >March</option>
+													<option value="4" >April</option>
+													<option value="5" >May</option>
+													<option value="6" >June</option>
+													<option value="7" >July</option>
+													<option value="8" >August</option>
+													<option value="9" >September</option>
+													<option value="10" >October</option>
+													<option value="11" >November</option>
+													<option value="12" >December</option>
 												</select>
-                                                <input type="number" min="0" class="form-control" placeholder="შეგროვების წელი" name="collection_date_year" value="">
+                                                <input type="number" min="0" class="form-control" placeholder="Year" name="collection_date_year" value="">
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="identifier">გამრკვევი</label>
+                                            <label for="identifier">Identifier</label>
                                             <input type="text" class="form-control" name="identifier" value="">
                                         </div>
                                         <div class="form-group col-lg-3">
-                                            <label>გარკვევის თარიღი</label>
+                                            <label>Identification Date</label>
                                             <div class="filter-date">
-                                                <input type="number" min="0" max="31" class="form-control" placeholder="დღე" name="identification_date_day" value="">
+                                                <input type="number" min="0" max="31" class="form-control" placeholder="Day" name="identification_date_day" value="">
                                                 <select class="form-control" name="identification_date_month">
-                                                    <option selected disabled value="">გარკვევის თვე</option>
-													<option value="1" >იანვარი</option>
-													<option value="2" >თებერვალი</option>
-													<option value="3" >მარტი</option>
-													<option value="4" >აპრილი</option>
-													<option value="5" >მაისი</option>
-													<option value="6" >ივნისი</option>
-													<option value="7" >ივლისი</option>
-													<option value="8" >აგვისტო</option>
-													<option value="9" >სექტემბერი</option>
-													<option value="10" >ოქტომბერი</option>
-													<option value="11" >ნოემბერი</option>
-													<option value="12" >დეკემბერი</option>
+                                                    <option selected disabled value="">Month</option>
+													<option value="1" >January</option>
+													<option value="2" >February</option>
+													<option value="3" >March</option>
+													<option value="4" >April</option>
+													<option value="5" >May</option>
+													<option value="6" >June</option>
+													<option value="7" >July</option>
+													<option value="8" >August</option>
+													<option value="9" >September</option>
+													<option value="10" >October</option>
+													<option value="11" >November</option>
+													<option value="12" >December</option>
 												</select>
-                                                <input type="number" min="0" class="form-control" placeholder="გარკვევის წელი" name="identification_date_year" value="">
+                                                <input type="number" min="0" class="form-control" placeholder="Year" name="identification_date_year" value="">
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="country">ქვეყანა</label>
+                                            <label for="country">Country</label>
                                             <select class="form-control" name="country">
-                                                <option selected disabled value="">ქვეყანა</option>
-												<option value="1" >საქართველო</option>
-												<option value="3" >სომხეთი</option>
-												<option value="4" >თურქეთი</option>
-												<option value="5" >აზერბაიჯანი</option>
-												<option value="6" >რუსეთი</option>
+                                                <option selected disabled value="">Country</option>
+												<option value="1" >Sakartvelo</option>
+												<option value="3" >Armenia</option>
+												<option value="4" >Turkiye</option>
+												<option value="5" >Azerbaijan</option>
 											</select>
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="region">რეგიონი</label>
+                                            <label for="region">Region</label>
                                             <input type="text" class="form-control" name="region" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="municipality">მუნიციპალიტეტი</label>
+                                            <label for="municipality">Municipality</label>
                                             <input type="text" class="form-control" name="municipality" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="locality">ლოკაცია</label>
+                                            <label for="locality">Locality</label>
                                             <input type="text" class="form-control" name="place" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="habitat">ჰაბიტატი</label>
+                                            <label for="habitat">Habitat</label>
                                             <div class="habitat">
                                                 <input type="text" class="form-control" name="habitat" value="">
-                                                <input type="text" class="form-control" name="code" placeholder="კოდი" value="">
+                                                <input type="text" class="form-control" name="code" placeholder="Code" value="">
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="altitude">სიმაღლე</label>
+                                            <label for="altitude">Altitude</label>
                                             <div class="altitude">
                                                 <input type="number" min="0" class="form-control" name="altitude" value="">
                                                 <select class="form-control" name="altitude_value">
-                                                    <option selected disabled value="">საზ. ერთ.</option>
-													<option value="meter" >მეტრი</option>
-													<option value="feet" >ფუტი</option>
+                                                    <option selected disabled value="">Value</option>
+													<option value="meter" >Meters</option>
+													<option value="feet" >Feet</option>
 												</select>
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-3">
-                                            <label for="altitudeRange">სიმაღლის დიაპაზონი</label>
+                                            <label for="altitudeRange">Altitude Range</label>
                                             <div class="altitude range">
-                                                <input type="number" min="0" class="form-control" placeholder="დან" name="altitude_range_from" value="">
-                                                <input type="number" min="0" class="form-control" placeholder="მდე" name="altitude_range_to" value="">
+                                                <input type="number" min="0" class="form-control" placeholder="from" name="altitude_range_from" value="">
+                                                <input type="number" min="0" class="form-control" placeholder="to" name="altitude_range_to" value="">
                                                 <select class="form-control" name="altitude_range_value">
-                                                    <option selected disabled value="">საზ. ერთ.</option>
-													<option value="meter" >მეტრი</option>
-													<option value="feet" >ფუტი</option>
+                                                    <option selected disabled value="">Value</option>
+													<option value="meter" >Meters</option>
+													<option value="feet" >Feet</option>
 												</select>
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-1">
-                                            <label for="inclination">დახრ. კუთხე</label>
+                                            <label for="inclination">Inclination</label>
                                             <input type="text" class="form-control" name="inclination" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
-                                            <label for="exposure">ექსპოზიცია</label>
+                                            <label for="exposure">Exposure</label>
                                             <input type="text" class="form-control" name="exposure" value="">
                                         </div>
                                         <div class="form-group col-lg-2">
                                             <div class="buttons">
-                                                <a href="http://127.0.0.1:5501/herbarium.html" class="btn btn-danger">გაუქმება</a>
-                                                <button type="submit" class="btn btn-primary">ძებნა</button>
+                                                <a href="http://127.0.0.1:5501/herbarium.html" class="btn btn-danger">Cancel</a>
+                                                <button type="submit" class="btn btn-primary">Search</button>
                                             </div>
                                         </div>
                                     </div> 
@@ -221,34 +220,34 @@
             </div>
             <div class="top-filter">
                 <div class="results-per-page">
-                    ნაჩვენებია                    
+                    Showing                    
 					<select id="changePerPage" class="custom-select custom-select-md">
                         <option value="15"  selected >15</option>
                         <option value="30" >30</option>
                         <option value="60" >60</option>
                     </select>
-                    ჩანაწერი                
+                    Records                
 				</div>
                 <div class="top-filter-controll">
-                    <span class="d-block mr-2">ჩანაწერები</span>
+                    <span class="d-block mr-2">Show only records with:</span>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="changeWithImages" >
-                        <label class="custom-control-label" for="changeWithImages">სურათით</label>
+                        <label class="custom-control-label" for="changeWithImages">Images</label>
                     </div>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="changeWithGeolocation" >
-                        <label class="custom-control-label" for="changeWithGeolocation">გეოლოკაციით</label>
+                        <label class="custom-control-label" for="changeWithGeolocation">Coordinates</label>
                     </div>
                     <div class="btn-group dropstart dropdown">
                         <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true">
-                            სორტირება                        </button>
+                            Sort                        </button>
                         <div class="dropdown-menu" x-placement="left-start">
                             <a class="dropdown-item " href="http://127.0.0.1:5501/herbarium.html?sort_by=created_at&amp;sort_dir=desc">
-                                ბოლოს დამატებული                            </a>
+                                Newest                            </a>
                             <a class="dropdown-item  active " href="http://127.0.0.1:5501/herbarium.html?sort_by=name&amp;sort_dir=asc">
-                                ა-ჰ                            </a>
+                                A-Z                            </a>
                             <a class="dropdown-item " href="http://127.0.0.1:5501/herbarium.html?sort_by=name&amp;sort_dir=desc">
-                                ჰ-ა                            </a>
+                                Z-A                           </a>
                         </div>
                     </div>
                 </div>
@@ -259,19 +258,19 @@
                         <div class="btn-holder">
                             <div class="btn-sticky-wrap">
                                 <div class="controll-buttons">
-									<a class="btn btn-primary btn-sm" href="https://tbi.iliauni.edu.ge/ka/map?sort_by=created_at&amp;sort_dir=desc&amp;per_page=15&amp;is_type=no" title="Map view">
+									<a class="btn btn-primary btn-sm" href="http://127.0.0.1:5501/map.html?sort_by=created_at&amp;sort_dir=desc&amp;per_page=15&amp;is_type=no" title="Map view">
                                         <i class="bi bi-globe"></i>
 									</a>
 									<button class="btn btn-primary btn-sm btn-disabled bookmarkSelectedNeedAuth" id="bookmarkSelected" title="Bookmark Selected">
                                             <i class="bi bi-bookmark"></i>
 										</button>
-										<form action="https://tbi.iliauni.edu.ge/ka/record-mailto" method="GET">
+										<form action="http://127.0.0.1:5501/herbarium-Mail.html" method="GET">
 											<button class="btn btn-primary btn-sm btn-disabled" id="emailSelected" title="Email Selected">
                                             <i class="bi bi-envelope"></i>
 										</button>
 										<input type="hidden" class="selected-items" value="" name="selected_items">
 									</form>
-                                    <form action="https://tbi.iliauni.edu.ge/ka/record-export" method="GET">
+                                    <form action="http://127.0.0.1:5501/herbarium.html" method="GET">
 										<input type="hidden" class="selected-items" value="" name="selected_items">
 										<button class="btn btn-primary btn-sm btn-disabled" id="exportSelected" title="Export Selected">
                                             <i class="bi bi-filetype-xls"></i>
@@ -289,13 +288,13 @@
                                 <thead>
 									<tr>
 										<th></th>
-										<th>პირველადი საკოლექციო ნომერი</th>
-										<th>შემგროვებელი</th>
-										<th>შეგროვების თარიღი</th>
-										<th>ქვეყანა</th>
-										<th>ლოკაცია</th>
-										<th>ტიპი</th>
-										<th>საიდენტიფიკაციო ნომერი</th>
+										<th>Primary Accession Name</th>
+										<th>Collector</th>
+										<th>Collection Date</th>
+										<th>Country</th>
+										<th>Locality</th>
+										<th>Type</th>
+										<th>Voucher ID</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -312,10 +311,10 @@
 											</div>
                                     	</td>
 										<th><a href="https://tbi.iliauni.edu.ge/ka/record/11-asyneuma-campanuloides">Asyneuma campanuloides</a></th>
-										<td>Ida Mandenova,შ. ქუთათელაძე</td>
-										<td>21 აგვისტო 1952</td>
-										<td>საქართველო</td>
-										<td>ჯვარი</td>
+										<td>Ida Mandenova, Sh. kutateladze</td>
+										<td>21 August 1952</td>
+										<td>Sakartvelo</td>
+										<td>Cross</td>
 										<td></td>
 										<td>TBI1033695</td>
 									</tr>
@@ -333,31 +332,11 @@
                                  	   </td>
 	                                    <th><a href="https://tbi.iliauni.edu.ge/ka/record/10-campanula-collina">Campanula collina</a></th>
 										<td>G. Woronow</td>
-										<td>13 აგვისტო 1901</td>
-										<td>საქართველო</td>
+										<td>13 August 1901</td>
+										<td>Sakartvelo</td>
 										<td>ad pedem montis Adange</td>
 										<td></td>
 										<td>TBI1037062</td>
-									</tr>
-									<tr>
-	                                    <td>
-    	                                    <div class="preflight">
-        	                                    <div class="custom-control custom-checkbox">
-            	                                    <input type="checkbox" class="custom-control-input" id="customCheck9" onchange="checkboxes(9)">
-                	                                <label class="custom-control-label" for="customCheck9"></label>
-                    	                        </div>
-                        	                    <button data-id="9" data-slug="9-campanula-alliariaefolia" class="btn btn-link text-darker u-none show-info-modal">
-                                                	<i class="bi bi-info-circle-fill"></i>
-                	                            </button>
-                	                        </div>
-                	                    </td>
-                	                    <th><a href="https://tbi.iliauni.edu.ge/ka/record/9-campanula-alliariaefolia">Campanula alliariaefolia</a></th>
-										<td>N. Popov</td>
-										<td>14 აგვისტო 1910</td>
-										<td>საქართველო</td>
-										<td>Между сс. Шуахеви и Тбети</td>
-										<td></td>
-										<td>TBI1037139</td>
 									</tr>
 									<tr>
 	                                    <td>
@@ -373,31 +352,11 @@
         	                            </td>
             	                        <th><a href="https://tbi.iliauni.edu.ge/ka/record/8-podanthum-campanuloides">Podanthum campanuloides</a></th>
 										<td>N. Ketzchoweli</td>
-										<td>29 ივლისი 1929</td>
-										<td>საქართველო</td>
+										<td>29 July 1929</td>
+										<td>Sakartvelo</td>
 										<td>in jugo Kharwaslis hevis mtebis in monte Sarchani</td>
 										<td></td>
 										<td>TBI1033671</td>
-									</tr>
-									<tr>
-	                                    <td>
-    	                                    <div class="preflight">
-        	                                    <div class="custom-control custom-checkbox">
-            	                                    <input type="checkbox" class="custom-control-input" id="customCheck7" onchange="checkboxes(7)">
-                	                                <label class="custom-control-label" for="customCheck7"></label>
-                    	                        </div>
-                        	                    <button data-id="7" data-slug="7-podanthum-campanuloides" class="btn btn-link text-darker u-none show-info-modal">
-                                            	    <i class="bi bi-info-circle-fill"></i>
-	                                            </button>
-    	                                    </div>
-        	                            </td>
-            	                        <th><a href="https://tbi.iliauni.edu.ge/ka/record/7-podanthum-campanuloides">Podanthum campanuloides</a></th>
-										<td>W. Lipsky</td>
-										<td>25 ივლისი 1892</td>
-										<td>რუსეთი</td>
-										<td>Ледникъ Безенгй</td>
-										<td></td>
-										<td>TBI1033627</td>
 									</tr>
 								</tbody>
                             </table>
