@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: #f0f3ee;
+    background-color: #eff7ea;
 }
 main{
     margin: 0;
@@ -88,12 +88,10 @@ i.bi {
 .pl-2, .px-2 {
     padding-left: 0.5rem !important;
 }
-p {
+span p, .mb-4 p {
+    display: block;
     margin-top: 0;
     margin-bottom: 1rem;
-}
-p {
-    display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -197,11 +195,11 @@ element.style {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-ol, ul, dl {
+ol, span ul, dl {
     margin-top: 0;
     margin-bottom: 1rem;
 }
-ul {
+span ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -332,7 +330,7 @@ b, strong {
     margin-bottom: 0;
 }
 .data-export-control .check-all .custom-control {
-    background-color: #3e5749;
+    background-color: #659645;
     color: #f5f5f5;
     padding: 8px 15px;
     border-radius: 3px;
@@ -437,8 +435,8 @@ input[type="radio"], input[type="checkbox"] {
     margin-left: 5px;
 }
 .logo p{
-    padding-top: 12px;
-    padding-left: 3px;
+    padding-top: 12px !important;
+    padding-left: 3px !important;
 }
 
 nav{
@@ -964,13 +962,11 @@ select {
     min-height: 1.5rem;
     padding-left: 1.5rem;
 }
-.custom-control-input {
-    accent-color: #659645;
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    width: 1rem;
-    height: 1.25rem;
+.invisible{
+    margin-top:-3px;
+}
+.invisible::before{
+    display: none;
 }
 input {
     font-weight: 200;
