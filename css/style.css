@@ -379,7 +379,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 .custom-control-label::after {
     position: absolute;
-    top: 0.25rem;
+    top: 0rem;
     left: -1.5rem;
     display: block;
     width: 1rem;
@@ -824,9 +824,6 @@ div {
     grid-template-columns: 100px 1fr;
     grid-gap: 10px;
 }
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-}
 .btn-danger {
     color: #fff !important;
     background-color: #bb2b2b !important; 
@@ -872,10 +869,6 @@ a {
     background-color: transparent;
 }
 a:-webkit-any-link {
-    cursor: pointer;
-}
-
-button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
     cursor: pointer;
 }
 
