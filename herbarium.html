@@ -4,12 +4,10 @@
 	<title>Tbilisi State University Digital Herbarium</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -233,26 +231,23 @@
 				</div>
                 <div class="top-filter-controll">
                     <span class="d-block mr-2">ჩანაწერები</span>
-                    <div class="custom-control custom-switch switchers">
+                    <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="changeWithImages" >
                         <label class="custom-control-label" for="changeWithImages">სურათით</label>
                     </div>
-                    <div class="custom-control custom-switch switchers">
+                    <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="changeWithGeolocation" >
                         <label class="custom-control-label" for="changeWithGeolocation">გეოლოკაციით</label>
                     </div>
-                    <div class="btn-group dropleft">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <div class="btn-group dropstart dropdown">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true">
                             სორტირება                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item  active "
-                               href="http://tbi.iliauni.edu.ge/ka/record?sort_by=created_at&amp;sort_dir=desc&amp;per_page=15&amp;is_type=no">
+                        <div class="dropdown-menu" x-placement="left-start">
+                            <a class="dropdown-item " href="http://127.0.0.1:5501/herbarium.html?sort_by=created_at&amp;sort_dir=desc">
                                 ბოლოს დამატებული                            </a>
-                            <a class="dropdown-item "
-                               href="http://tbi.iliauni.edu.ge/ka/record?sort_by=name&amp;sort_dir=asc&amp;per_page=15&amp;is_type=no">
+                            <a class="dropdown-item  active " href="http://127.0.0.1:5501/herbarium.html?sort_by=name&amp;sort_dir=asc">
                                 ა-ჰ                            </a>
-                            <a class="dropdown-item "
-                               href="http://tbi.iliauni.edu.ge/ka/record?sort_by=name&amp;sort_dir=desc&amp;per_page=15&amp;is_type=no">
+                            <a class="dropdown-item " href="http://127.0.0.1:5501/herbarium.html?sort_by=name&amp;sort_dir=desc">
                                 ჰ-ა                            </a>
                         </div>
                     </div>
