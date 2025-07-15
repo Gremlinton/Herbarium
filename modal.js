@@ -71,7 +71,7 @@ style.innerHTML = `
 #loginModal .modal-content {
     background-color: #fefefe;
     margin: 10% auto;
-    border: 2px solid #446d28;
+    border: 2px solid #659645;
     width: 300px;
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
