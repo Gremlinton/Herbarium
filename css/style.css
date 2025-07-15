@@ -1327,7 +1327,7 @@ td {
     rgba(0, 0, 0, 0)50%,
     rgba(0, 0, 0, 0.1),
     rgba(0, 0, 0, 1)), 
-    url(/img/bg2.jpg);
+    url(/img/bg2.png);
     background-size:auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -1428,7 +1428,7 @@ article h2{
     rgba(0, 0, 0, 0)50%,
     rgba(0, 0, 0, 0.1),
     rgba(0, 0, 0, 1)), 
-    url(/img/bg2.jpg);
+    url(/img/bg2.png);
     background-size:auto;
     background-position: center;
     background-repeat: no-repeat;
