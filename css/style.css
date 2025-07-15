@@ -226,9 +226,6 @@ li {
 element.style {
     width: 365.328px;
 }
-.select2-container--bootstrap4 .select2-selection--multiple .select2-search__field {
-    color: #495057;
-}
 .select2-container .select2-search--inline .select2-search__field {
     box-sizing: border-box;
     border: none;
@@ -713,7 +710,7 @@ label {
     background-color: transparent;
     border: 0;
 }
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item:hover, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
     background-color: #446d28;
@@ -737,14 +734,9 @@ label {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
-button, input {
-    overflow: visible;
-}
-input, button, select, optgroup, textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+.form-control:disabled, .form-control[readonly] {
+    background-color: #ccd3cd;
+    opacity: 1;
 }
 input[type="text" i] {
     padding-block: 1px;
@@ -837,6 +829,7 @@ div {
         flex-direction: column;
     }
 }
+
 .btn.btn-link.text-darker{
     background-color: transparent;
 }
@@ -1042,8 +1035,11 @@ select {
 .invisible{
     margin-top: 0 !important;
 }
-.invisible::before{
+.invisible::before, .invisible::after{
     display: none;
+}
+.page-title-holder p{
+    color: #767676;
 }
 input[type="checkbox" i] {
     background-color: initial;
@@ -1425,7 +1421,7 @@ article h2{
 }
 
 .blog-wrapper{
-    padding: 10% 17% 30%;
+    padding: 10% 25% 15%;
     background: linear-gradient(to bottom,
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.1),
@@ -1852,9 +1848,6 @@ input {
     padding: 4px;
     width: 100%;
     box-sizing: border-box;
-}
-.select2-container--bootstrap4 .select2-search {
-    width: 100%;
 }
 .select2-search--dropdown {
     display: block;
